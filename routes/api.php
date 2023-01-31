@@ -1,5 +1,11 @@
 <?php
 
+use App\Http\Controllers\IzdavanjeController;
+use App\Http\Controllers\KnjigaController;
+use App\Http\Controllers\KnjigaIzdavanjeController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\StudentIzdavanjeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +23,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::resource('/users', UserController::class)->only(['show', 'index']);
+Route::resource('/studenti', StudentController::class)->only(['show', 'index']);
+Route::resource('/knjige', KnjigaController::class)->only(['show', 'index']);
+Route::resource('/izdavanja', IzdavanjeController::class)->only(['show', 'index']);
+
+Route::get('/knjige/{id}/izdavanja', [KnjigaIzdavanjeController::class, 'index'])->name('knjige.izdavanja.index');
+Route::get('/studenti/{id}/izdavanja', [StudentIzdavanjeController::class, 'index'])->name('studenti.izdavanja.index');

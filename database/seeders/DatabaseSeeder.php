@@ -105,21 +105,21 @@ class DatabaseSeeder extends Seeder
                 'user_id' => $user1->id
             ], 
             [
-                'naziv_knjige' => $knjiga4->naziv,
-                'autor_knjige' => $knjiga4->autor,
+                'naziv_knjige' => $knjiga1->naziv,
+                'autor_knjige' => $knjiga1->autor,
                 'napomena' => 'Knjiga je vracena u dobrom stanju.',
                 'datum_izdavanja' => '2023-01-03',
                 'datum_vracanja' => '2023-01-19',
-                'knjiga_id' => $knjiga4->id,
-                'student_id' => $student1->id,
+                'knjiga_id' => $knjiga1->id,
+                'student_id' => $student2->id,
                 'user_id' => $user1->id
             ],
             [
                 'naziv_knjige' => $knjiga3->naziv,
                 'autor_knjige' => $knjiga3->autor,
                 'napomena' => 'Knjiga je vracena u dobrom stanju.',
-                'datum_izdavanja' => '2022-12-05',
-                'datum_vracanja' => '2022-12-19',
+                'datum_izdavanja' => '2022-05-04',
+                'datum_vracanja' => '2022-06-19',
                 'knjiga_id' => $knjiga3->id,
                 'student_id' => $student2->id,
                 'user_id' => $user1->id
