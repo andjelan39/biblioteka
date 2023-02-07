@@ -51,7 +51,7 @@ class KnjigaController extends Controller
         if(is_null($knjiga)){
             return response()->json('Data not found', 404);
         }
-        return response()->json(new KnjigaResource ($knjiga));
+        return new KnjigaResource($knjiga);
 
     }
 

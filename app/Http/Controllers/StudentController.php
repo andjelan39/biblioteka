@@ -51,7 +51,7 @@ class StudentController extends Controller
         if(is_null($student)){
             return response()->json('Data not found', 404);
         }
-        return response()->json($student);
+        return new StudentResource($student);
     }
 
     /*
